@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+.app {
+  height: 100vh;
+  background-color: #FFF2ED;
+  font-size: 16px;
+}
+header{
+  height: 4rem;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.flex {
+  display: flex;
+}
+
+/* .dropdown .menu-items {
+  width: 200px;
+
+} */
+/* .main-nav .menu-items a:hover {
+  
+  border-bottom: 1px solid orange;
+ 
+}
+.main-nav .menu-items button:hover{
+  border-bottom: 1px solid orange;
+} */
+
+
+
+
+
+
+/* Styling the element */
+/* .main-nav .menu-items button {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+
+}  */
+
+
+
+/* Styling the element */
+
+
+
+/* this is to persist border bottom color in parent when submenu is hovered */
+.main-nav .menu-items ul li:hover~a {
+  border-bottom: 0.5px solid orange;
+  background-color: bisque;
+
+}
+
+/* end here */
+
+
+/* Default styles */
+.parent-nav {
+  background-color: lightblue;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}

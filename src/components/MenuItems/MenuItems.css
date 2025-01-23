@@ -1,0 +1,161 @@
+.main-nav .menu-items {
+    margin-right: 2rem;
+}
+.main-nav .menu-items a {
+    display: block;
+    text-decoration: none;
+    padding: 1.5rem 0rem;
+    width: 100%;
+}
+/* Overirding default button styles */
+.main-nav .menu-items .dropdown-menuitems button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 1.5rem 0rem;
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+
+}
+/* This section is to override default <a> tag styles */
+.main-nav .menu-items .dropdown-menuitems a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+    /* Space for the border effect */
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+.main-nav .menu-items.main-nav-item a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+    /* Space for the border effect */
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+.menu-items.main-nav-item button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 1.5rem 0rem;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+
+}
+.menu-items .main-nav-item a {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 1.5rem 0rem;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+
+}
+.main-nav-item .menu-items button{
+
+}
+
+
+.main-nav .menu-items a::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #019fb6;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.main-nav .menu-items li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px orange;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.main-nav .menu-items li:hover:after {
+    transform: scaleX(1);
+    color: blue;
+}
+
+
+.main-nav .menu-items li:after {
+    transform-origin: 0% 50%;
+}
+
+
+.items-title{
+    width: 80%;
+}
+.main-nav-item .items-title{
+    width:100%
+}
+
+
+
+/* ...Ends */
+.main-nav .arrow::after {
+    content: "";
+    display: inline-block;
+    margin-left: 0.28em;
+    vertical-align: 0.09em;
+    border-top: 0.42em solid;
+    border-right: 0.32em solid transparent;
+    border-left: 0.32em solid transparent;
+}
+/* spacing between main nav item and arrow */
+.main-nav button span {
+    margin-left: 5px;
+}
+
+
+/* ....Ends */
+/* Animating text */
+.main-nav .menu-items .items-title:hover {
+    color: orange;
+    -webkit-animation: shake .5s ease-in-out;
+    animation: shake .5s ease-in-out;
+}
+.active{
+    color: orange;
+}
+.inActive{
+    color: #000;
+}
+/* ANimating text */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-0.5px);
+    }
+
+    40% {
+        transform: translateX(0.5px);
+    }
+
+    60% {
+        transform: translateX(-0.5px);
+    }
+
+    80% {
+        transform: translateX(0.5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
