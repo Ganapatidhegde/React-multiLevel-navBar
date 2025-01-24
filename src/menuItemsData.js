@@ -16,7 +16,7 @@ export const menuItemsData = [
                             { title: 'Events' },
                             { title: 'International Faculty' }
                         ]
-                     },
+                    },
                     { title: 'Ranking & Recognition' },
                     { title: 'Reports' },
                     { title: 'Campus Life' },
@@ -24,7 +24,7 @@ export const menuItemsData = [
                     { title: 'Events' },
                     { title: 'International Faculty' }
                 ]
-             },
+            },
             { title: 'Ranking & Recognition' },
             { title: 'Reports' },
             { title: 'Campus Life' },

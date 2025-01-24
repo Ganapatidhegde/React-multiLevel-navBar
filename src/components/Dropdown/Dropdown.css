@@ -1,5 +1,5 @@
 .dropdown .menu-items {
-    width: 200px;
+    width: 80%;
 }
 
 .main-nav .dropdown {
@@ -22,7 +22,7 @@
     left: 0rem;
     padding: 1rem 1rem;
     visibility: visible;
-    height:500px
+    height: 75%
 }
 
 .main-nav .dropdown .dropdown-submenu {
@@ -36,22 +36,18 @@
 
 }
 
-/* .dropdown-container{
-    width: 100vw;
-        background: white;
-        height: 500px;
-        position: absolute;
-        left: -25rem;
-} */
-.main-nav .dropdown {
-    /* overflow-y: auto;
-    opacity: 1;
-    width: 50%;
-    left: 25rem;
-    padding: 1rem 1rem;
-    visibility: visible;
-    height: 500px;
-    top: 0rem;
-    z-index: 100000; */
+.main-nav .dropdown.show .secondLevel {
+    left: 13rem;
 }
 
+.center {
+    position: absolute;
+    left: 28%;
+    top: 8%;
+}
+
+.middle-line {
+    width: 1px;
+    height: 87%;
+    background: orange;
+}

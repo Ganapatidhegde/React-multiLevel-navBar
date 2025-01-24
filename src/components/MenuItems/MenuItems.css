@@ -1,12 +1,10 @@
-.main-nav .menu-items {
-    margin-right: 2rem;
-}
 .main-nav .menu-items a {
     display: block;
     text-decoration: none;
-    padding: 1.5rem 0rem;
+    padding: 1rem 0rem;
     width: 100%;
 }
+
 /* Overirding default button styles */
 .main-nav .menu-items .dropdown-menuitems button {
     display: flex;
@@ -14,12 +12,13 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    padding: 1.5rem 0rem;
+    padding: 1rem 0rem;
     text-align: left;
     font-size: 14px;
     width: 100%;
 
 }
+
 /* This section is to override default <a> tag styles */
 .main-nav .menu-items .dropdown-menuitems a {
     position: relative;
@@ -30,6 +29,7 @@
     text-decoration: none;
     font-size: 14px;
 }
+
 .main-nav .menu-items.main-nav-item a {
     position: relative;
     display: inline-block;
@@ -37,8 +37,9 @@
     /* Space for the border effect */
     color: #000;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
 }
+
 .menu-items.main-nav-item button {
     display: flex;
     align-items: center;
@@ -51,6 +52,7 @@
     width: 100%;
 
 }
+
 .menu-items .main-nav-item a {
     display: flex;
     align-items: center;
@@ -63,9 +65,8 @@
     width: 100%;
 
 }
-.main-nav-item .menu-items button{
 
-}
+.main-nav-item .menu-items button {}
 
 
 .main-nav .menu-items a::after {
@@ -95,11 +96,13 @@
 }
 
 
-.items-title{
-    width: 80%;
+
+.menu-items.main-nav-item .items-title {
+    width: 100%
 }
-.main-nav-item .items-title{
-    width:100%
+
+.li-container {
+    width: 15rem
 }
 
 
@@ -114,6 +117,7 @@
     border-right: 0.32em solid transparent;
     border-left: 0.32em solid transparent;
 }
+
 /* spacing between main nav item and arrow */
 .main-nav button span {
     margin-left: 5px;
@@ -127,12 +131,15 @@
     -webkit-animation: shake .5s ease-in-out;
     animation: shake .5s ease-in-out;
 }
-.active{
+
+.active {
     color: orange;
 }
-.inActive{
+
+.inActive {
     color: #000;
 }
+
 /* ANimating text */
 @keyframes shake {
     0% {
@@ -158,4 +165,36 @@
     100% {
         transform: translateX(0);
     }
+}
+
+.banner {
+    width: 100%;
+    height: 500px;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 3rem
+}
+
+.main-nav .dropdown :has(.show)~.banner {
+    height: 500px;
+}
+
+
+.main-nav .dropdown.show {
+    overflow-y: auto;
+    opacity: 1;
+    /* display: block; */
+    width: 60%;
+    left: 25rem;
+    padding: 1rem 1rem;
+    visibility: visible;
+    height: 500px;
+    z-index: 10000;
+    top: -1rem
+}
+
+.secondLevel {
+    left: 13rem;
+    /* top: 0rem; */
 }

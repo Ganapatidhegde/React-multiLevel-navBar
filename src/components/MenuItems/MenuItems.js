@@ -29,34 +29,39 @@ const MenuItems = ({ items, depthLevel, myClasses }) => {
     const onMouseLeave = (e) => {
         setDropdown(false);
     };
-    const renderToggleArrow = (opened,level) => {
+    const renderToggleArrow = (opened, level) => {
         if (level === 0) {
-            return opened ? <span>&uarr;</span>: <span>&darr;</span> 
+            return opened ? <span>&uarr;</span> : <span>&darr;</span>
+        }
     }
-}
     return (
-        <li className={`menu-items ${myClasses}`} ref={ref}
-            onMouseEnter={(e) => { onMouseEnter(e, ref) }}
-            onMouseLeave={onMouseLeave}
-        >
-            <div className="items-title">
-                {items.submenu ? (
-                    <button type="button" aria-haspopup="menu"
-                        aria-expanded={dropdown ? "true" : "false"}
-                        onClick={() => setDropdown((prev) => !prev)}
-                        className={`${myClasses} ${dropdown ? 'active' : "inActive"}`}>
-                        {items.title} {' '}
-                        {renderToggleArrow(dropdown,depthLevel)}
-                    </button>
-                ) : (
-                    <a href="/#">{items.title}</a>
-                )}
-            </div>
-            {items.submenu && <div>
-                <Dropdown submenus={items.submenu} dropdown={dropdown} depthLevel={depthLevel} items={items} />
-            </div>}
+        <div className={`${depthLevel > 0 ? "li-container" : undefined}`}>
+            <li onMouseEnter={(e) => { onMouseEnter(e, ref) }}
+                onMouseLeave={onMouseLeave} className={`menu-items ${myClasses}`} ref={ref}
 
-        </li>
+            >
+                <div className="items-title">
+                    {items.submenu ? (
+                        <button type="button" aria-haspopup="menu"
+                            aria-expanded={dropdown ? "true" : "false"}
+                            onClick={() => setDropdown((prev) => !prev)}
+                            className={`${myClasses} ${dropdown ? 'active' : "inActive"}`}>
+                            {items.title} {' '}
+                            {renderToggleArrow(dropdown, depthLevel)}
+                        </button>
+                    ) : (
+                        <a className="" href="/#">{items.title}</a>
+                    )}
+                </div>
+                <div className={depthLevel === 0 && dropdown && items.submenu ? "banner" : ''}>
+                    {items.submenu &&
+                        <Dropdown submenus={items.submenu} dropdown={dropdown} depthLevel={depthLevel} items={items} />
+                    }
+                </div>
+
+
+            </li>
+        </div>
     );
 };
 

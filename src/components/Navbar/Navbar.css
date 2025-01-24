@@ -1,10 +1,11 @@
 .main-nav .menus {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style: none;
-    position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  /* position: relative; */
 }
+
 .main-nav {
   width: calc(100% - 400px)
 }
