@@ -1,5 +1,5 @@
 .dropdown .menu-items {
-    width: 80%;
+    width: 57%;
 }
 
 .main-nav .dropdown {
@@ -7,7 +7,7 @@
     left: 3rem;
     list-style: none;
     height: 0;
-    top: 4rem;
+    /* top: 4rem; */
     /* background-color: bisque; */
     opacity: 0;
     visibility: hidden;
